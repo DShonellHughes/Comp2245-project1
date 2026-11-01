@@ -1,2 +1,286 @@
-/* Project 1: write all of your styles in this file.
-   Follow the layout, font and colour guide in the project brief. */
+#The page layout
+
+*{
+   box-sizing: border-box
+}
+
+body{
+   margin: 0;
+   font-family: "Inter", Arial, sans-serif;
+   font-size: 18px;
+   line-height: 1.6;
+   color: #1A202C;
+}
+
+images{
+   max-width: 1100px;
+   height: auto;
+}
+
+section{
+   padding-top: 80px;
+   padding-bottom: 80px;
+}
+
+#The headings
+h1, h2, h3, .logo{
+   font-family: "Fraunces", Georgia, serif;
+   color: #22543D
+}
+h1{
+   font-size: 52px;
+}
+h2{
+   font-size: 36px;
+}
+h3{
+   font-size: 22px;
+}
+
+#The bottons
+.btn{
+   display: inline-block;
+   background-color: #2F855A;
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+   border-radius: 8px;
+   padding: 12px 24px;
+   cursor: pointer;
+}
+
+.btn:hover{
+   background-color: #276749;
+}
+
+.logo{
+   font-size: 24px;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+.nav-links{
+   display: flex;
+   gap: 24px;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.nav-links a {
+   color: #2D3748;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+.nav-links a:hover{
+   color: #2F855A;
+   text-decoration: underline;
+}
+
+#The hero img
+
+.hero{
+   background-color: #F0FFF4;
+}
+
+.hero .container{
+   display: grid;
+   grid-template-column: 1fr 1fr;
+   gap: 48px;
+   align-items: center;
+}
+
+.hero p{
+   font-size: 20px;
+   margin-bottom: 24px;
+}
+
+#The features
+
+.feature-list{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 32px;
+}
+
+.feature h2{
+   text-align: center;
+   margin-bottom: 48px;
+}
+
+.feature{
+   background-color: #F7FAFC;
+   paadding: 32px;
+   border-radius: 12px;
+}
+
+#The visits
+
+.visit{
+   background-color: #F0FFF4;
+}
+
+.visit .container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 48px;
+   align-items: center;
+}
+
+#The mark table
+
+table{
+   width: 100%;
+   border-collapse: collapse;
+}
+
+caption{
+   text-align: left;
+}
+
+th, td{
+   text-align: left;
+   padding: 10px 12px;
+   border-bottom: 1px solid #C6F6D5;
+}
+
+th{
+   background-color: #2F855A;
+   color: #FFFFFF;
+}
+
+#The testimonial
+
+.testimonial{
+   background-color: #FFFFFF;
+   padding: 32px;
+   border-left: 6px solid #2F855A;
+   border-radius: 0 8px 8px 0;
+   margin: 0;
+   font-style: italic;
+   font-size: 20px;
+}
+
+.testimonial p:last-child{
+   color: #4A5568;
+   font-size: 16px;
+   font-style: normal;
+}
+
+#The mailing list
+
+#mailing-list h2,
+#mailing-list > .container > p{
+   text-align: center;
+}
+
+form{
+   max-width: 520px;
+   margin: 0 auto;
+}
+
+form label{
+   display: block;
+   margin-bottom: 5px;
+}
+
+form input,
+form select{
+   display: block;
+   width: 100%;
+   padding: 10px 12px;
+   border: 1px solid #A0AEC0;
+   border-radius: 8px;
+   font: inherit;
+}
+
+form input: focus,
+form select: focus{
+   outline: 2px solid #2F855A;
+}
+
+form .btn{
+   width: 100%;
+}
+
+.error{
+   color: #C53030;
+   font-size: 15px;
+   min-height: 24px;
+}
+
+form[aria-invalid = "True"] {
+   border: 2px solid #C53030;
+}
+
+#The Successful message
+
+#form-message.success{
+   max-width: 520px;
+   margin: 20px auto;
+   padding: 16px;
+   background-color: #C6F6D5;
+   color: #22543D;
+   font-weight: bold;
+   border-radius: 8px;
+}
+
+#The footer
+
+footer{
+   background-color: #22543D;
+   color: #FFFFFF;
+   font-size: 16px;
+   padding: 32px 0;
+}
+
+fotter .container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+fotter p{
+   margin: 0;
+}
+
+footer .container p{
+   color: #FFFFFF;
+}
+
+#The responsive design
+
+@media screen and (max-width: 768px){
+   h1{
+      font-size:40px;
+   }
+   h2{
+      font-size: 30px;
+   }
+   section{
+      padding-top: 48px;
+      padding-bottom: 48px;
+   }
+   #The header
+   .site-header .container{
+      flex-direction: column;
+      gap: 8px;
+   }
+   #The hero
+   .hero .container{
+      grid-template-column: 1fr;
+   }
+   #The feature list
+   .feature-list{
+      grid-template-column: 1fr;
+   }
+   #The visit section
+   .visit .container{
+      grid-template-column: 1fr;
+   }
+   #The footer section
+   footer .container{
+   flex-direction: column;
+      gap: 8px;
+}
